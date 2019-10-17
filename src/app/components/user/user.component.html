@@ -1,8 +1,37 @@
 <div style="background-color:#372a57; min-height:500px">
-<section id="intro" class="wrapper style1 fullscreen fade-up">
+<section id="intro" class="wrapper style1 fullscreen fade-up" style="padding:40px">
 	<div class="inner">
-		<h1>User List</h1>
-		<p>User list will appear here</p>
+		<h1>Create New User </h1>
+		<p>User list will appear later</p>
 	</div>
+  <form>
+    <div class="container">
+      <div class="form-group">
+        <label [ngStyle]="{color: name ? 'green': 'red'}">Name:</label>
+        <input type="text" name="name" [(ngModel)]="name" />
+      </div>
+      <div class="form-group">
+        <label [ngStyle]="{color: clr(phone)}">Phone:</label>
+        <input type="text" name="phone" [(ngModel)]="phone" />
+      </div>
+      <div class="form-group">
+        <label [ngStyle]="{color: clr(email)}">Email:</label>
+        <input type="text" name="email" [(ngModel)]="email" />
+      </div>
+      <div class="form-group">
+        <button (click)="updateEmail()" class="btn btn-dark">SUBMIT NOW</button>
+      </div>
+      <p *ngIf="name || phone || email">
+      Real Time - Name = {{ name }}, Phone = {{ phone }} and Email = {{ email }}
+      </p>
+    </div>
+  </form>
 </section>
 </div>
+
+<style>
+input, textarea{
+  max-width: 500px;
+  margin: 0px 0px 10px 0px;
+}
+</style>

@@ -2,14 +2,11 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-user',
-  templateUrl: './user.component.html',
-  styles: []
+  templateUrl: './user.component.html'
 })
-export class UserComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class UserComponent {
+  clr(v){
+    console.log('v=',v)
+    return (v) ? 'green' : 'red'
   }
-
 }

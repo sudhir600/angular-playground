@@ -1,45 +1,31 @@
-<section id="click" class="wrapper">
-  <button (click)="alertMe()">Alert me</button>
-</section>
+<section id="ngFor" class="wrapper style1 fullscreen fade-up" style="padding:40px">
+    <h1>Tickets</h1>
+    <p>List of All tickets will appear here.</p>
 
-<section id="ngFor" class="wrapper style1 fullscreen fade-up">
-Token = ({{ token }}) comming from lib/common.ts
-  <ul>
-    <li *ngFor="let x of names;">{{ x }}</li>
-  </ul>
-</section>
+    <button (click)="alertMe()" style="width:200px">Alert me</button>
+    ({{ token }}) comming from lib/common.ts<br />
+    <ul>
+      <li *ngFor="let x of names;">{{ x }}</li>
+    </ul>
+   <select [(ngModel)]="selectedValue">
+      <option *ngFor="let item of items;" [value]="item.name">
+        {{item.name}}
+      </option>
+      <option>Some others</option>
+      <option>Some others2 </option>
+      <option>Some others3 </option>
+  </select>
 
-<section id="ngSwitch" class="wrapper style1 fullscreen fade-up">
- {{ selectedValue }}
- <select [(ngModel)]="selectedValue">
-    <option *ngFor="let item of items;" [value]="item.name">
-      {{item.name}}
-    </option>
-    <option>Some others</option>
-    <option>Some others2 </option>
-    <option>Some others3 </option>
-</select>
-
-<div [ngSwitch]="selectedValue">  NG Switch choosen for = :
-    <span *ngSwitchCase="'One'">One is Pressed</span>
-    <span *ngSwitchCase="'Two'">Two is Selected</span>
-    <span *ngSwitchCase="'Three'">Three is Selected</span>
-    <span *ngSwitchDefault>Default Option</span>
-</div>
-</section>
-
-<section id="ngIF" class="wrapper style1 fullscreen fade-up">
-<div class="inner">
-<!-- if else -->
-  <p *ngIf="1+1==3; else nfBlock">ngif true</p>
-  <ng-template #nfBlock>ngElse false</ng-template>
-  <br />
-
-
-
-
-<h1>Tickets</h1>
-<p>List of All tickets will appear here.</p>
-
-</div>
+  <div [ngSwitch]="selectedValue">  NG Switch choosen for = :
+      <span *ngSwitchCase="'One'">One is Pressed</span>
+      <span *ngSwitchCase="'Two'">Two is Selected</span>
+      <span *ngSwitchCase="'Three'">Three is Selected</span>
+      <span *ngSwitchDefault>Default Option</span>
+  </div>
+  <div class="inner">
+  <!-- if else -->
+    <p *ngIf="1+1==3; else nfBlock">ngif true</p>
+    <ng-template #nfBlock>ngElse false</ng-template>
+    <br />
+  </div>
 </section>
