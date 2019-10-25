@@ -6,6 +6,7 @@ import { DetailsComponent } from './components/user/details/details.component';
 import { ContractComponent } from './components/contract/contract.component';
 import { SalesComponent } from './components/sales/sales.component';
 import { TicketComponent } from './components/ticket/ticket.component';
+import { AjaxComponent } from './components/ajax/ajax.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'contract', component: ContractComponent },
   { path: 'sales', component: SalesComponent },
   { path: 'ticket', component: TicketComponent },
+  { path: 'ajax', component: AjaxComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
@@ -31,5 +33,6 @@ export const routingComponents = [
   ContractComponent,
   SalesComponent,
   TicketComponent,
+  AjaxComponent,
   NotFoundComponent
 ];

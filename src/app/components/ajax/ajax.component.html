@@ -1,0 +1,59 @@
+<section id="ngFor" class="wrapper style1 fullscreen fade-up" style="padding:40px">
+  <h1>Ajax</h1> 
+  <table>
+    <tr>
+    <td style="width:10px">
+    <input type="checkbox" checked="checked" [disabled]="!isToggle" />
+    </td>
+    <td>
+      <p class="left l2">
+        {{ isToggle ? 'Toggle ON': 'Toggle OFF' }}
+      </p>
+    </td>
+    </tr>
+    <tr>
+    <td colspan="2">
+      <input type="radio" name="rnd" checked="checked" [disabled]="!isToggle" />
+      <input type="text" value="Something Here" [disabled]="!isToggle" [ngClass]="['small', isToggle ? '': 'red']" />
+    </td>
+    </tr>
+    
+  </table>
+  <div>
+    
+  </div>  
+    
+   <button onclick="javascript:alert('nothing')" class="small">
+   simple function calling</button>
+   <br />
+   
+   
+   <button (click)="toggle()" [ngClass]="['small', isToggle ? 'green': 'red']">Button status - {{ isToggle }}</button>
+  
+</section>  
+
+
+<style>
+.left{
+  float:left;
+}
+.l1{
+  width:2%;
+}
+.l2{
+  width:97%;
+}
+.small{
+  width:200px;
+}
+.green{
+  background-color: green;
+}
+.red{
+  background-color: red;
+}
+input{
+  -webkit-appearance: listitem!important;
+  appearance: listitem!important;
+}
+</style>

@@ -64,13 +64,6 @@ input::-moz-focus-inner {
 	padding: 0;
 }
 
-input, select, textarea {
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	-ms-appearance: none;
-	appearance: none;
-}
-
 /* Basic */
 
 	@-ms-viewport {
@@ -2381,34 +2374,7 @@ input, select, textarea {
 		body.is-ie textarea {
 			min-height: 10em;
 		}
-
-	input[type="checkbox"],
-	input[type="radio"] {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		display: block;
-		float: left;
-		margin-right: -2em;
-		opacity: 0;
-		width: 1em;
-		z-index: -1;
-	}
-
-		input[type="checkbox"] + label,
-		input[type="radio"] + label {
-			text-decoration: none;
-			color: rgba(255, 255, 255, 0.55);
-			cursor: pointer;
-			display: inline-block;
-			font-size: 1em;
-			font-weight: normal;
-			padding-left: 2.4em;
-			padding-right: 0.75em;
-			position: relative;
-		}
-
+		
 			input[type="checkbox"] + label:before,
 			input[type="radio"] + label:before {
 				-moz-osx-font-smoothing: grayscale;
