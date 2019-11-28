@@ -9,14 +9,14 @@ import common from '../../lib/common'
 export class TicketComponent {
 	title: string = "some String goes here";
   token: any = common.token;
-  names = ['momah', 'roochit', 'kumar', 'shayam'];
-  selectedValue: string= 'One';
+  names = ['momah', 'roochit', 'kumar', 'shayam', 'parasad'];
+  selectedValue: string= 'Two';
   items = [
             {name: 'One', val: 1},
             {name: 'Two', val: 2},
             {name: 'Three', val: 3}
           ];
-  alertMe(){
-    alert(1)
+  alertMe(a:number, b:number){
+    alert(a+b)
   }
 }
