@@ -1,0 +1,23 @@
+<section id="intro" class="wrapper style1 fullscreen fade-up">
+
+<div class="inner">
+<div class="localeWrapper">
+  <button (click)="changeTo('en')" [ngClass]="activeLocale == 'en'? 'lngActive': ''">EN</button>
+  <button (click)="changeTo('ru')" [ngClass]="activeLocale == 'ru'? 'lngActive': ''">RU</button><br />
+  <i> locale ({{ activeLocale == 'en' ? 'English' : 'Russian'  | uppercase }}) is active.</i><br />
+</div>
+<h1>Translation will change below. </h1>
+<p>{{ 'app' | translate }}</p>
+<p>{{ 'nested1.nested2.nested3.country' | translate }} <sup style="color:white">(nested1.nested2.nested3.country)</sup></p>
+<p>{{ 'footer' | translate }}</p>
+
+</div>
+</section>
+<style>
+.lngActive {
+    background: green;
+    text-decoration: underline;
+    font-size: 10px;
+    margin-right:15px;
+}
+</style>

@@ -5,6 +5,7 @@ import { UserComponent } from './components/user/user.component';
 import { DetailsComponent } from './components/user/details/details.component';
 import { ContractComponent } from './components/contract/contract.component';
 import { SalesComponent } from './components/sales/sales.component';
+import { I18nComponent } from './components/i18n/i18n.component';
 import { TicketComponent } from './components/ticket/ticket.component';
 import { AjaxComponent } from './components/ajax/ajax.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -14,7 +15,7 @@ const routes: Routes = [
   { path: 'user', component: UserComponent },
   { path: 'user/details', component: DetailsComponent },
   { path: 'contract', component: ContractComponent },
-  { path: 'sales', component: SalesComponent },
+  { path: 'i18n', component: I18nComponent },
   { path: 'ticket', component: TicketComponent },
   { path: 'ajax', component: AjaxComponent },
   { path: '**', component: NotFoundComponent }
@@ -32,6 +33,7 @@ export const routingComponents = [
   DetailsComponent,
   ContractComponent,
   SalesComponent,
+  I18nComponent,
   TicketComponent,
   AjaxComponent,
   NotFoundComponent

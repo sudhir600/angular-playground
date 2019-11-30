@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TranslateService} from '../../translate.service';
 import fetch from 'node-fetch';
 
 @Component({
@@ -7,8 +8,11 @@ import fetch from 'node-fetch';
   styles: []
 })
 export class ContractComponent implements OnInit {
-  constructor() {}
+	
+  constructor(private translate: TranslateService) {}
+  
   ngOnInit() {}
+  
   contracts: any = ''
   gitUserName: any = 'sudhir600'
   ajax(){
@@ -33,4 +37,12 @@ export class ContractComponent implements OnInit {
       return this.contracts = json
     })
   }
+  
+	activeLocale = localStorage.getItem('locale');
+
+	changeTo(lng: string) {
+		this.activeLocale = lng;
+		this.translate.use(lng);
+		localStorage.setItem('locale', lng);
+	}
 }
