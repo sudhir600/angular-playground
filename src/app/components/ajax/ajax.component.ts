@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AjaxComponent {
   isToggle = false;
   toggle(){
-    if(this.isToggle === true){
+    if(this.isToggle){
       this.isToggle = false;
     }else{
       this.isToggle = true;
