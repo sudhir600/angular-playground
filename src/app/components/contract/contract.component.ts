@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {TranslateService} from '../../translate.service';
 import fetch from 'node-fetch';
 
 @Component({
@@ -7,15 +8,17 @@ import fetch from 'node-fetch';
   styles: []
 })
 export class ContractComponent implements OnInit {
-  constructor() {}
+	
+  constructor(private translate: TranslateService) {}
+  
   ngOnInit() {}
+  
   contracts: any = ''
   gitUserName: any = 'sudhir600'
   ajax(){
     return fetch('https://api.github.com/users/github')
     .then(res => res.json())
     .then(json => {
-      console.log(json);
       //return this.contracts = JSON.stringify(json)
       return this.contracts = json
     })
@@ -28,9 +31,16 @@ export class ContractComponent implements OnInit {
     return fetch(`https://api.github.com/users/${this.gitUserName}`)
     .then(res => res.json())
     .then(json => {
-      console.log(json);
       //return this.contracts = JSON.stringify(json)
       return this.contracts = json
     })
   }
+  
+	activeLocale = localStorage.getItem('locale');
+
+	changeTo(lng: string) {
+		this.activeLocale = lng;
+		this.translate.use(lng);
+		localStorage.setItem('locale', lng);
+	}
 }

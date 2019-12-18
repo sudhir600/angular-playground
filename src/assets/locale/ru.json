@@ -1,0 +1,11 @@
+{
+  "app": "Простые Angular - 8 детские площадки",
+  "footer": "footer russia",
+  "nested1":{
+    "nested2": {
+      "nested3": {
+        "country": "Russia"
+      }
+    }
+  }
+}

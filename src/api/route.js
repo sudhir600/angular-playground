@@ -16,7 +16,6 @@ app.get('/test', function (req, res) {
       if(error){
         console.log('errro found while sql run', error)
       }
-      console.log('Result = ', results)
       res.send({'error': false, 'info': 'Congrats! Your API is working', 'data': results})
     })
   })

@@ -1,0 +1,11 @@
+{
+  "app": "Simple Angular - 8 playground",
+  "footer": "footer english",
+  "nested1":{
+    "nested2": {
+      "nested3": {
+        "country": "india"
+      }
+    }
+  }
+}

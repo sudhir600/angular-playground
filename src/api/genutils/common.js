@@ -8,7 +8,6 @@ module.exports = {
     const targetFile =  url.length > 1 ? url.pop() : 'index'
     const targetFolder =url.join('/')
     const module = `${$root}/modules/${targetFolder}/${targetFile}.js`
-    console.log('Target Module = ', module)
     const isFileExits  = pathExists.sync(module)
     if(isFileExits){
     	const targetModule = require(module)    //E.g modules/user.js

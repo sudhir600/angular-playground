@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent {
   clr(v){
-    console.log('v=',v)
     return (v) ? 'green' : 'red'
   }
 }
