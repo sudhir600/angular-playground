@@ -1,3 +1,5 @@
+<button class="test" (click)="get()"> GET </button>
+<button class="test" (click)="post()" style="margin-left: 200px"> POST </button>
 <div class="topnav" id="myTopnav">
 	<a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">Home</a>
 	<a routerLink="/contract/">Contract</a>
@@ -14,7 +16,7 @@
 		<nav>
 			<ul>
 				<li>
-					<a routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact:true}">	
+					<a routerLinkActive="active" routerLink="/" [routerLinkActiveOptions]="{exact:true}">
 					Welcome
 					</a>
 				</li>
@@ -37,7 +39,6 @@
 		</nav>
 	</div>
 </section>
-			
 			<div id="wrapper" style="display:block">
 				<router-outlet></router-outlet>
 				<!-- sudhir component -->
@@ -45,3 +46,12 @@
 				<!-- dashboard component -->
 			</div>
 <footer id="footer" class="wrapper style1-alt"  style="display:block">footer goes here</footer>
+<style>
+  .test{
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    background: red;
+    z-index: 99999999;
+  }
+</style>

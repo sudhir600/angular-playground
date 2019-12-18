@@ -11,7 +11,6 @@ module.exports = {
           this.manageSqlFailure(res, null, err)
           connection.release()
           results = (results.length == 1 && !noStrip) ? results[0]: results
-          console.log(results)
           resolve(results)
         })
       })

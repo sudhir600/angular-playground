@@ -19,7 +19,6 @@ export class ContractComponent implements OnInit {
     return fetch('https://api.github.com/users/github')
     .then(res => res.json())
     .then(json => {
-      console.log(json);
       //return this.contracts = JSON.stringify(json)
       return this.contracts = json
     })
@@ -32,7 +31,6 @@ export class ContractComponent implements OnInit {
     return fetch(`https://api.github.com/users/${this.gitUserName}`)
     .then(res => res.json())
     .then(json => {
-      console.log(json);
       //return this.contracts = JSON.stringify(json)
       return this.contracts = json
     })
